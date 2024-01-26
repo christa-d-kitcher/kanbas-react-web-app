@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <body>
+
+        <select id="select-one-grade-type-action">
+            <option value="SPEED GRADER">Speed Grader</option>
+        </select><br/><br/>
+
+        <div style="border-bottom: black solid 0.5px"></div>
+
+        <h3>Assignment Name</h3>
+
+        <input type="text"
+               value="A1 - ENV + HTML"
+               id="text-fields-assignment-name"/><br/><br/>
+
+        <form id="textarea">
+            <textarea cols="70" rows="10">This is the assignment description.</textarea>
+        </form><br/>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td align="right">Points</td>
+                    <td><input value="100", type="number", max="100", min="0"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td align="right">Assignment Group</td>
+                    <td>
+                        <select id="select-one-assignment-group-option">
+                        <option value="ASSIGNMENTS">ASSIGNMENTS</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td align="right">Display Grade as</td>
+                    <td>
+                        <select id="select-one-grade-display-option">
+                            <option value="PERCENTAGE">Percentage</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td align="right">Submission Type</td>
+                    <td>
+                        <select id="select-one-submission-type-option">
+                            <option value="ONLINE">Online</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <label>Favorite movie genre:</label>
+                        <br/>
+                        <input type="checkbox" value="TEXT ENTRY"
+                               name="check-online-entry-option" id="chkbox-text-entry"/>
+                        <label for="chkbox-text-entry">Text Entry</label><br/>
+                        <input type="checkbox" value="WEBSITE URL"
+                               name="check-online-entry-option" id="chkbox-website-url"/>
+                        <label for="chkbox-website-url">Website URL</label><br/>
+                        <input type="checkbox" value="MEDIA RECORDINGS"
+                               name="check-online-entry-option" id="chkbox-media-recordings"/>
+                        <label for="chkbox-media-recordings">Media Recordings</label><br/>
+                        <input type="checkbox" value="STUDENT ANNOTATION"
+                               name="check-online-entry-option" id="chkbox-student-annotation"/>
+                        <label for="chkbox-student-annotation">Student Annotation</label><br/>
+                        <input type="checkbox" value="FILE UPLOADS"
+                               name="check-online-entry-option" id="chkbox-file-uploads"/>
+                        <label for="chkbox-file-uploads">File Uploads</label><br/>
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td align="right">Assign</td>
+                    <td>
+                        <label for="text-field-assignee">Assign To</label><br/>
+                        <input id="text-field-assignee", value="Everyone", type="text">
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td align="right">Due</td>
+                    <td><input id="date-field-due-date", type="date", value="2024-02-01"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td align="right">Available from</td>
+                    <td><input id="date-field-available-date", type="date", value="2024-01-01"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td align="right">Until</td>
+                    <td><input id="date-field-available-until-date", type="date", value="2024-02-04"></td>
+                </tr>
+            </tbody>
+        </table><br/><br/>
+
+        <button><a href="/Kanbas/Courses/Assignments/screen.html">Cancel</a></button>
+        <button><a href="/Kanbas/Courses/Assignments/screen.html">Save</a></button>
+    </body>
+</html>
