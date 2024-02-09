@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.css"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Dashboard/index.css" />
+
+    <!--Linking CSS stylesheets from Kanbas Navigation index-->
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+
+</head>
+    <body class="row">
+        <!-- Top Nav Bar-->
+        <div class="d-none">Top Nav Bar</div>
+
+        <div class="row">
+
+            <!--Kanbas Navigation-->
+            <div class="col-1">
+                <ul class="wd-kanbas-navigation">
+                    <li class="wd-neu">
+                        <a href="#">N</a>
+                    </li>
+                    <li>
+                        <a href="/Kanbas/Account/Profile/screen.html"><i class="fas fa-user-circle"></i>Account</a>
+                    </li>
+                    <li class="wd-active">
+                        <a href="/Kanbas/Dashboard/screen.html"><i class="fas fa-tachometer-alt"></i></i>Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="/Kanbas/Courses/Home/screen.html"><i class="fas fa-book"></i>Courses</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-calendar-alt"></i>Calendar</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-envelope"></i><br/>Inbox</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-history"></i>History</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-laptop"></i>Studio</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-sign-out-alt"></i>Commons</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-question-circle"></i><br/>Help</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Dashboard Screen Main Content-->
+            <div class="col-11 p-4 ps-sm-5">
+                <h1>Dashboard</h1> <hr />
+                <h2 class="wd-kanbas-darker-text">Published Courses (8)</h2> <hr />
+                <div class="row">
+                    <div class="row row-cols-1 row-cols-md-5 g-4">
+
+                        <!--Course 1-->
+                        <div class="col wd-kanbas-dashboard-column-width wd-kanbas-dashboard-card-spacing">
+                            <div class="card wd-kanbas-dashboard-card">
+                                <img src="/images/react.jpg" class="card-img-top wd-kanbas-dashboard-images"/>
+                                <div class="card-body wd-kanbas-dashboard-card">
+                                    <a class="card-title wd-kanbas-dashboard-course-name" href="/Kanbas/Courses/Home/screen.html">
+                                        CS1234 56789 Full Stack Development | React JS</a>
+                                    <p class="card-text wd-kanbas-dashboard-course-code">CS1234.56789 202410</p>
+                                    <p class="card-text wd-kanbas-dashboard-smaller-text">56789-01 Spring 2024 Semester</p>
+                                    <a href="#" class="wd-kanbas-dashboard-card-icon"><i class="fas fa-edit"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Course 2-->
+                        <div class="col wd-kanbas-dashboard-column-width wd-kanbas-dashboard-card-spacing">
+                            <div class="card wd-kanbas-dashboard-card">
+                                <img src="/images/ai.jpg" class="card-img-top wd-kanbas-dashboard-images"/>
+                                <div class="card-body">
+                                    <a class="card-title wd-kanbas-dashboard-course-name" href="/Kanbas/Courses/Home/screen.html">
+                                        CS4321 98765 Introduction to Artificial Intelligence</a>
+                                    <p class="card-text wd-kanbas-dashboard-course-code">CS4321.98765 202410</p>
+                                    <p class="card-text wd-kanbas-dashboard-smaller-text">98765-07 Spring 2024 Semester</p>
+                                    <a href="#" class="wd-kanbas-dashboard-card-icon"><i class="fas fa-edit"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Course 3-->
+                        <div class="col wd-kanbas-dashboard-column-width wd-kanbas-dashboard-card-spacing">
+                            <div class="card wd-kanbas-dashboard-card">
+                                <img src="/images/analytics.jpg" class="card-img-top wd-kanbas-dashboard-images"/>
+                                <div class="card-body">
+                                    <a class="card-title wd-kanbas-dashboard-course-name" href="/Kanbas/Courses/Home/screen.html">
+                                        CS5000 65432 Data Analytics</a>
+                                    <p class="card-text wd-kanbas-dashboard-course-code">CS5000.65432 202410</p>
+                                    <p class="card-text wd-kanbas-dashboard-smaller-text">65432-04 Spring 2024 Semester</p>
+                                    <a href="#" class="wd-kanbas-dashboard-card-icon"><i class="fas fa-edit"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Course 4-->
+                        <div class="col wd-kanbas-dashboard-column-width wd-kanbas-dashboard-card-spacing">
+                            <div class="card wd-kanbas-dashboard-card">
+                                <img src="/images/innovation.jpg" class="card-img-top wd-kanbas-dashboard-images"/>
+                                <div class="card-body">
+                                    <a class="card-title wd-kanbas-dashboard-course-name" href="/Kanbas/Courses/Home/screen.html">
+                                        CS4500 23455 Innovation in Healthcare</a>
+                                    <p class="card-text wd-kanbas-dashboard-course-code">CS4500.23455 202410</p>
+                                    <p class="card-text wd-kanbas-dashboard-smaller-text">23455-01 Spring 2024 Semester</p>
+                                    <a href="#" class="wd-kanbas-dashboard-card-icon"><i class="fas fa-edit"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row row-cols-1 row-cols-md-5 g-4">
+
+                        <!--Course 5-->
+                        <div class="col wd-kanbas-dashboard-column-width wd-kanbas-dashboard-card-spacing">
+                            <div class="card wd-kanbas-dashboard-card">
+                                <img src="/images/productdev.jpg" class="card-img-top wd-kanbas-dashboard-images"/>
+                                <div class="card-body wd-kanbas-dashboard-card">
+                                    <a class="card-title wd-kanbas-dashboard-course-name" href="/Kanbas/Courses/Home/screen.html">
+                                        ENG1234 56789 Product Development</a>
+                                    <p class="card-text wd-kanbas-dashboard-course-code">ENG1234.56789 202410</p>
+                                    <p class="card-text wd-kanbas-dashboard-smaller-text">56789-01 Spring 2024 Semester</p>
+                                    <a href="#" class="wd-kanbas-dashboard-card-icon"><i class="fas fa-edit"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Course 6-->
+                        <div class="col wd-kanbas-dashboard-column-width wd-kanbas-dashboard-card-spacing">
+                            <div class="card wd-kanbas-dashboard-card">
+                                <img src="/images/node.jpg" class="card-img-top wd-kanbas-dashboard-images"/>
+                                <div class="card-body">
+                                    <a class="card-title wd-kanbas-dashboard-course-name" href="/Kanbas/Courses/Home/screen.html">
+                                        CS5610 43232 Web Development with Node</a>
+                                    <p class="card-text wd-kanbas-dashboard-course-code">CS5610.43232 202410</p>
+                                    <p class="card-text wd-kanbas-dashboard-smaller-text">43232-07 Spring 2024 Semester</p>
+                                    <a href="#" class="wd-kanbas-dashboard-card-icon"><i class="fas fa-edit"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Course 7-->
+                        <div class="col wd-kanbas-dashboard-column-width wd-kanbas-dashboard-card-spacing">
+                            <div class="card wd-kanbas-dashboard-card">
+                                <img src="/images/systems.jpg" class="card-img-top wd-kanbas-dashboard-images"/>
+                                <div class="card-body">
+                                    <a class="card-title wd-kanbas-dashboard-course-name" href="/Kanbas/Courses/Home/screen.html">
+                                        CS4800 45678 Computer Systems Exploration</a>
+                                    <p class="card-text wd-kanbas-dashboard-course-code">CS4800.45678 202410</p>
+                                    <p class="card-text wd-kanbas-dashboard-smaller-text">45678-04 Spring 2024 Semester</p>
+                                    <a href="#" class="wd-kanbas-dashboard-card-icon"><i class="fas fa-edit"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Course 8-->
+                        <div class="col wd-kanbas-dashboard-column-width wd-kanbas-dashboard-card-spacing">
+                            <div class="card wd-kanbas-dashboard-card">
+                                <img src="/images/ux.jpg" class="card-img-top wd-kanbas-dashboard-images"/>
+                                <div class="card-body">
+                                    <a class="card-title wd-kanbas-dashboard-course-name" href="/Kanbas/Courses/Home/screen.html">
+                                        CS5800 55432 UX/UI Design</a>
+                                    <p class="card-text wd-kanbas-dashboard-course-code">CS5800.55432 202410</p>
+                                    <p class="card-text wd-kanbas-dashboard-smaller-text">55432-01 Spring 2024 Semester</p>
+                                    <a href="#" class="wd-kanbas-dashboard-card-icon"><i class="fas fa-edit"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+    </body>
+</html>

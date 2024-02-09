@@ -1,0 +1,12 @@
+.wd-menu-kanbas {
+    font-size: 2em;
+}
+
+.wd-menu-kanbas li {
+    list-style: none;
+}
+
+.wd-menu-kanbas li > a {
+    color: #ff7070;
+    text-decoration: none;
+}

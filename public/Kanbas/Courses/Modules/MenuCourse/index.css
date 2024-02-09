@@ -1,0 +1,14 @@
+.wd-menu-course {
+    font-size: 16px;
+}
+
+.wd-menu-course li {
+    list-style: none;
+}
+
+.wd-menu-course li > a {
+    color: #ff7070;
+    text-decoration: none;
+}
+
+

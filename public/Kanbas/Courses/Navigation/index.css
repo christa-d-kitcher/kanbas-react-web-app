@@ -1,0 +1,39 @@
+/*Course Navigation bar background, list style, padding, width and margin*/
+.wd-navigation {
+    background-color: white;
+    list-style: none;
+    padding: 0px;
+    width: 125px;
+    margin: 0px;
+    margin-left: 20px;
+}
+
+div.wd-kanbas-course-nav {
+    overflow: scroll;
+}
+
+/*Padding for each list item on the course navigation bar */
+.wd-navigation li {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*Styling the border to the left of the active navigation bar item*/
+.wd-navigation li.wd-course-navigation-active {
+    border-left: 2px solid black;
+}
+
+/*Styling the active navigation bar item*/
+.wd-navigation li.wd-course-navigation-active a {
+    color: black;
+}
+
+/*Styling the non-active navigation bar item*/
+.wd-navigation a {
+    color: red;
+    text-decoration: none;
+}
+
