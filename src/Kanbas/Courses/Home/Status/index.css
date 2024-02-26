@@ -1,0 +1,64 @@
+.wd-kanbas-status-buttons {
+    margin-left: 0px;
+    margin-top: 10px;
+    padding-left: 0px;
+}
+
+.wd-kanbas-status-buttons ul {
+    padding-left: 0px;
+}
+
+.wd-kanbas-status-buttons button {
+    margin: 5px;
+    margin-left: 0px;
+}
+
+
+.wd-kanbas-status-buttons i {
+    margin-right: 5px;
+}
+
+
+.wd-kanbas-status-button {
+    list-style: none;
+}
+
+.wd-kanbas-status-link-subtitles {
+    font-size: small;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-left: 20px;
+
+}
+
+.wd-kanbas-status-link-subtitles span {
+    font-size: small;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-left: 20px;
+}
+
+.wd-kanbas-status-links a {
+    text-decoration: none;
+    color: #ff7070;
+}
+
+.wd-kanbas-status-links li {
+    list-style: none;
+}
+
+.wd-kanbas-status-links ul {
+   padding-left: 0px;
+}
+
+.wd-kanbas-status-links i {
+    color: #ff7070;
+}
+
+.wd-kanbas-status-icon {
+    margin-right: 5px;
+}
+
+.wd-kanbas-status-icon i {
+    margin-right: 5px;
+}

@@ -1,0 +1,15 @@
+.wd-kanbas-edit-assignment-form-labels {
+    text-align: right;
+}
+
+.wd-kanbas-edit-assignment-assignee {
+    position: relative;
+    z-index: 1;
+    top: -33px;
+    right: -10px;
+}
+
+.wd-edit-center-text {
+    text-align: center;
+}
+

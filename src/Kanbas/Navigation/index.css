@@ -1,0 +1,61 @@
+/*Styling for Kanbas Navigation bar*/
+
+/*Background of navigation*/
+.wd-kanbas-navigation {
+    background-color: black;
+    list-style: none;
+    padding: 0px;  margin: 0px;
+    width: 80px;
+    height: 100vh;
+    position: fixed;
+}
+
+/*Padding, margin, font size and text alignment*/
+.wd-kanbas-navigation li {
+    padding: 10px;     margin-bottom: 10px;
+    font-size: 0.8em;  text-align: center;
+}
+
+/*Background for when nav item is active*/
+.wd-kanbas-navigation li.wd-active {
+    background-color: white;
+}
+
+/*Font color for when nav item is active*/
+.wd-kanbas-navigation li.wd-active a {
+    color: red;
+}
+
+/*Font color for non active nav bar items*/
+.wd-kanbas-navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+/*Icon color*/
+.wd-kanbas-navigation a i {
+    color: red;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+/* Northeaster-like "N"*/
+.wd-kanbas-navigation li.wd-neu a {
+    font-size: 4em;
+    font-family: "Lao MN";
+    padding: 0px;
+    color: red;
+}
+
+.wd-red-icon{
+    color: red;
+}
+
+/*
+.wd-kanbas-navigation li.wd-neu a.no-bottom-margin {
+    margin-bottom: 40px;
+}
+*/
+
+
+

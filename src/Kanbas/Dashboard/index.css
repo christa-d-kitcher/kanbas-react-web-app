@@ -1,0 +1,44 @@
+/* Dashboard course names*/
+.wd-kanbas-dashboard-course-name {
+    text-decoration: none;
+    color: steelblue;
+    font-weight: bold
+}
+
+/*Maximum image height for card*/
+.wd-kanbas-dashboard-images {
+    max-height: 160px;
+    min-height: 160px;
+}
+
+/*Column width of the column for each card*/
+.wd-kanbas-dashboard-column-width {
+    width: 280px;
+}
+
+/*spacing between the cards8*/
+.wd-kanbas-dashboard-card-spacing {
+    margin: 15px;
+    margin-bottom: 0px;
+}
+
+/*Color of card icon on the bottom left*/
+.wd-kanbas-dashboard-card-icon i {
+    color: darkgray;
+}
+
+/*Width of each card*/
+.wd-kanbas-dashboard-card {
+    width: 280px;
+    height: 330px;
+}
+
+/*Smaller text inside the card*/
+.wd-kanbas-dashboard-smaller-text {
+    font-size: 12px;
+    padding: 0px;
+}
+
+.wd-kanbas-dashboard-course-code {
+    margin: 0px;
+}

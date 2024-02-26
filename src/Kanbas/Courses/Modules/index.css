@@ -1,0 +1,71 @@
+/*Overall margin and padding styling to set them all to 0*/
+.wd-modules,
+.wd-modules * {
+    border-radius: 0%;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    color: #4d5154;
+}
+
+/*Margin for a module list item*/
+.wd-modules {
+    margin: 5px;
+}
+
+/*Coloring and borders for each module topmost list item, like WEEK 1*/
+.wd-modules > li {
+    background-color: #ecedee;
+    border: 1px solid #e5e6e7 !important;
+    border-left: none !important;
+}
+
+/*For topmost item in modules list*/
+.wd-modules > li > div {
+    padding: 10px;
+    border-left: 1px solid #e5e6e7 !important;
+}
+
+/*Overall styling for the main heading for week modules list*/
+.wd-modules > li > ul > li {
+    padding: 10px;
+    border-top: 1px solid #e5e6e7 !important;
+    border-left: 2px solid green;
+}
+
+/*Overall styling for each outer module list item*/
+.wd-modules > li {
+    margin-bottom: 20px;
+}
+
+.wd-modules-padding-all-round {
+    padding: 30px;
+}
+
+.wd-kanbas-modules-ellipsis-margin {
+    margin-right: 7px;
+}
+
+.wd-kanbas-modules-arrow-margin {
+    margin: 10px;
+}
+
+.wd-kanbas-modules-buttons {
+    text-align: right;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+.wd-kanbas-modules-innermost-list-margin {
+    margin-right: 40px;
+}
+
+.wd-kanbas-modules-link-icon {
+    color: green;
+}
+
+.wd-kanbas-modules-slides-links {
+    text-decoration: none;
+    color: #ff7070;
+    font-weight: lighter;
+}

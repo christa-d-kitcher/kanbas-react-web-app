@@ -1,0 +1,57 @@
+
+/*Overall margin and padding styling to set them all to 0*/
+.wd-assignments,
+.wd-assignments * {
+    border-radius: 0%;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    color: #4d5154;
+}
+
+/*Margin for a module list item*/
+.wd-assignments {
+    margin: 5px;
+}
+
+/*Coloring and borders for each module topmost list item, like WEEK 1*/
+.wd-assignments > li {
+    background-color: #ecedee;
+    border: 1px solid #e5e6e7 !important;
+    border-left: none !important;
+}
+
+/*For topmost item in modules list*/
+.wd-assignments > li > div {
+    padding: 10px;
+    border-left: 1px solid #e5e6e7 !important;
+}
+
+/*Overall styling for the main heading for week modules list*/
+.wd-assignments > li > ul > li {
+    padding: 10px;
+    border-top: 1px solid #e5e6e7 !important;
+    border-left: 2px solid green;
+}
+
+/*Overall styling for each outer module list item*/
+.wd-assignments > li {
+    margin-bottom: 20px;
+}
+
+.wd-kanbas-assignments-subtitles {
+    font-size: small;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-left: 42px;
+    color: #5c636a;
+}
+
+.wd-assignments-icons {
+    padding-top: 30px;
+}
+
+.wd-no-text-deco {
+    text-decoration: none;
+
+}
