@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import {assignments} from "../../../Database";
 import "../../../styles.css";
@@ -6,16 +6,37 @@ import "./index.css";
 import "../../../../libs/bootstrap/bootstrap.min.css";
 import {FaCheckCircle, FaEllipsisV} from "react-icons/fa";
 
+import { useSelector, useDispatch } from "react-redux";
+import {addAssignment, updateAssignment} from "../assignmentsReducer";
+import {KanbasState} from "../../../store";
+
 function AssignmentEditor() {
     const {assignmentId} = useParams();
-    const assignment = assignments.find(
-        (assignment) => assignment._id === assignmentId);
+    //const assignment = assignments.find((assignment) => assignment._id === assignmentId);
+    //const assignment = useSelector((state: KanbasState) => state.assignmentsReducer.assignment);
+
+    const [assignment, setAssignment] = useState({
+        _id: "", title: "New Assignment 123", course: "New Assignment course", points: "Out of 100",
+        dueDate: "2024-03-28", availableFromDate: "2024-03-21", availableUntilDate: "2024-03-30"
+    })
+
+    const assignmentsList = useSelector((state: KanbasState) =>
+        state.assignmentsReducer.assignments);
+
+    // if (assignmentId !== null) {
+    //     const clickedAssignment = (assignmentsList.find((a) => a._id === assignmentId));
+    //     setAssignment(clickedAssignment);
+    // };
+
+
     const {courseId} = useParams();
     const navigate = useNavigate();
-    const handleSave = () => {
-        console.log("Actually saving assignment TBD in later assignments");
+    const handleSave = (assignment: { availableFromDate: string; dueDate: string; course: string; _id: string; title: string; availableUntilDate: string; points: string }) => {
+        {assignment._id !== "" ? dispatch(updateAssignment(assignment)) : dispatch(addAssignment(assignment))}
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
+
+    const dispatch = useDispatch();
 
     return (
         <div className="col wd-kanbas-screen-component-padding wd-kanbas-entire-page-padding pe-5">
@@ -35,20 +56,30 @@ function AssignmentEditor() {
                 Assignment Name
             </div>
             <div>
-                <input value={assignment?.title} type="text" className="form-control w-25"/>
+                <input value={assignment?.title} type="text" className="form-control w-25"
+                       onChange={(e) => setAssignment({ ...assignment, title: e.target.value })}
+                />
             </div>
 
             <div className="mt-3">
             <textarea className="form-control"
                       id="textarea1"
+                      value={assignment?.course}
+                      onChange={(e) => setAssignment({ ...assignment, course: e.target.value })}
                       >This is the assignment description. This assignment describes how to install the development environment for creating and working with Web applications we will be developing this semester.
             </textarea>
             </div>
 
             <div className="row mt-3">
-                <div className="col-2 wd-kanbas-edit-assignment-form-labels">Points</div>
-                <div className="col-10"><input type="text" className="form-control w-25"
-                                               value="100"/></div>
+                <div className="col-2 wd-kanbas-edit-assignment-form-labels">
+                    Points</div>
+                <div className="col-10">
+                    <input type="text"
+                           className="form-control w-25"
+                           value={assignment?.points}
+                           onChange={(e) => setAssignment({ ...assignment, points: e.target.value })}
+                    />
+                </div>
             </div>
 
             <div className="row mt-3">
@@ -102,8 +133,10 @@ function AssignmentEditor() {
                     <div className="row m-3 w-25">
                         <label htmlFor="assignee" className="fw-semibold">Due</label>
                         <div>
-                            <input type="text" className="form-control"
-                                   value="Jan 28, 2024, 11:59pm"/>
+                            <input type="date" className="form-control"
+                                   value={assignment?.dueDate}
+                                   onChange={(e) => setAssignment({ ...assignment, dueDate: e.target.value })}
+                            />
                         </div>
                     </div>
 
@@ -112,7 +145,11 @@ function AssignmentEditor() {
                         <span>
                         <label htmlFor="assignee" className="fw-semibold">Available From</label>
                         <div>
-                            <input type="text" className="form-control" value="01/28/24"/>
+                            <input type="date"
+                                   className="form-control"
+                                   value={assignment?.availableFromDate}
+                                   onChange={(e) => setAssignment({ ...assignment, availableFromDate: new Date (e.target.value).toString() })}
+                            />
                         </div>
                     </span>
                         </div>
@@ -121,7 +158,12 @@ function AssignmentEditor() {
                         <span>
                             <label htmlFor="assignee" className="fw-semibold">Until</label>
                             <div>
-                                <input type="text" className="form-control" value="02/08/24"/>
+                                <input type="date"
+                                       className="form-control"
+                                       value={assignment?.availableUntilDate}
+                                       onChange={(e) => setAssignment({ ...assignment, availableUntilDate: e.target.value })}
+
+                                />
                             </div>
                         </span>
                         </div>
@@ -148,9 +190,11 @@ function AssignmentEditor() {
                     <Link to={`/Kanbas/Courses/${courseId}/Assignments`} className="btn btn-light btn-sm float-end">
                         Cancel
                     </Link>
-                    <button onClick={handleSave} className="btn btn-danger btn-sm float-end me-2">
+                    <button onClick={() => handleSave(assignment) } className="btn btn-danger btn-sm float-end me-2">
                         Save
                     </button>
+                    {/*How do I have this function onClick for when it's coming from clicking on a specific assignment?*/}
+                    {/*onClick={() => dispatch(updateAssignment(assignment))} do I just do an if statement?*/}
                 </div>
 
             </div>

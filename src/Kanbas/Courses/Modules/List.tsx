@@ -8,15 +8,62 @@ import {modules} from "../../Database";
 import {FaEllipsisV, FaCheckCircle, FaPlusCircle, FaCaretDown, FaPlus} from "react-icons/fa";
 import { useParams } from "react-router";
 
+import { useSelector, useDispatch } from "react-redux";
+import {
+    addModule,
+    deleteModule,
+    updateModule,
+    setModule,
+} from "./reducer";
+import { KanbasState } from "../../store";
 
 function ModuleList() {
     const { courseId } = useParams();
     //const modules = db.modules;
-    console.log("Testing");
-    console.log(modules);
-    console.log(courseId);
-    const modulesList = modules.filter((module) => module.course === courseId);
+    // console.log("Testing");
+    // console.log(modules);
+    // console.log(courseId);
+    // //const modulesList = modules.filter((module) => module.course === courseId);
+    // const [modulesList, setModuleList] = useState<any[]>(modules.filter((module) => module.course === courseId));
+
+    // const [module, setModule] = useState({
+    //     name: "New Module",
+    //     description: "New Description",
+    //     course: courseId,
+    // });
+    // const addModule = (module: any) => {
+    //     const newModule = { ...module,
+    //         _id: new Date().getTime().toString() };
+    //     const newModuleList = [newModule, ...modulesList];
+    //     setModuleList(newModuleList);
+    // };
+    //
+    // const deleteModule = (moduleId: string) => {
+    //     const newModuleList = modulesList.filter(
+    //         (module) => module._id !== moduleId );
+    //     setModuleList(newModuleList);
+    // };
+    //
+    // const updateModule = () => {
+    //     const newModuleList = modulesList.map((m) => {
+    //         if (m._id === module._id) {
+    //             return module;
+    //         } else {
+    //             return m;
+    //         }
+    //     });
+    //     setModuleList(newModuleList);
+    // };
+
+
+    const modulesList = useSelector((state: KanbasState) =>
+        state.modulesReducer.modules);
+    const module = useSelector((state: KanbasState) =>
+        state.modulesReducer.module);
+    const dispatch = useDispatch();
+
     const [selectedModule, setSelectedModule] = useState(modulesList[0]);
+
     return (
         <div className="wd-modules-padding-all-round">
             <div className="row">
@@ -45,8 +92,36 @@ function ModuleList() {
             <hr/>
 
             <div className="row">
+
+                <div>
+                    <input value={module.name}
+                           onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
+                           placeholder="New Module Name"
+                           className="form-control w-50"
+                    /><br/>
+
+                    <textarea value={module.description}
+                              onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
+                              placeholder="New Module Description"
+                              className="form-control w-50"
+                    /><br/>
+                    <button  onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+                             className="form-control w-25 float-end btn btn-success"
+                    >
+                        Add
+                    </button>
+                    <button onClick={() => dispatch(updateModule(module))}
+                            className="form-control w-25 float-end btn btn-dark"
+                    >
+                        Update
+                    </button>
+                </div>
                 <ul className="list-group wd-modules">
-                    {modulesList.map((module, index) => (
+                    <li className="list-group-item">
+
+                    </li>
+
+                    {modulesList.map((module: any, index: number) => (
                         <li key={index}
                             className="list-group-item fw-bold"
                             onClick={() => setSelectedModule(module)}>
@@ -57,11 +132,25 @@ function ModuleList() {
                                     <FaCheckCircle className="text-success align-middle" />
                                     <FaPlus className="ms-2 align-middle" />
                                     <FaEllipsisV className="ms-2 align-middle" />
+
+                                     <button onClick={() => dispatch(setModule(module))}
+                                             className="btn btn-warning float-end"
+                                     >
+                                         Edit
+                                     </button>
+
+
+                                    <button onClick={() => dispatch(deleteModule(module._id))}
+                                            className="btn btn-danger float-end"
+                                    >
+                                       <span className="text-light">Delete</span>
+                                    </button>
+
                                 </span>
                             </div>
                             {selectedModule._id === module._id && (
                                 <ul className="list-group">
-                                    {module.lessons?.map((lesson, index) => (
+                                    {module.lessons?.map((lesson: any, index: number) => (
                                         <li className="list-group-item" key={index}>
                                             <FaEllipsisV className="me-0 ms-4"/><FaEllipsisV className="ms-0 me-2" />
                                             {lesson.name}

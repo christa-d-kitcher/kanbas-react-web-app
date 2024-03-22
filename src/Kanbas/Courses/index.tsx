@@ -11,11 +11,11 @@ import AssignmentEditor from "./Assignments/Edit";
 import Grades from "./Grades";
 import {useLocation} from "react-router";
 
-function Courses() {
+function Courses({ coursesSV }: { coursesSV: any[]; }) {
     const { courseId } = useParams();
     const location = useLocation();
     const {pathname} = location;
-    const course = courses.find((course) => course._id === courseId);
+    const course = coursesSV.find((course) => course._id === courseId);
     return (
         <div>
             <div className="row"><h6 className="pt-2 wd-red-txt"><HiMiniBars3 className="me-2" color='red'/>{course?.number} {course?.name} {pathname.includes("Modules") && "> modules"}</h6> <hr/></div>
@@ -34,6 +34,7 @@ function Courses() {
                             <Route path="Zoom" element={<h1>Zoom Meetings</h1>} />
                             <Route path="Assignments" element={<Assignments/>} />
                             <Route path="Assignments/:assignmentId" element={<AssignmentEditor/>} />
+                            <Route path="Assignments/AssignmentEditor" element={<AssignmentEditor/>} />
                             <Route path="Quizzes" element={<h1>Quizzes</h1>} />
                             <Route path="Grades" element={<Grades/>} />
                             <Route path="People" element={<h1>People</h1>} />
