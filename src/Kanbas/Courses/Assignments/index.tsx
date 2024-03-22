@@ -16,7 +16,8 @@ function Assignments() {
     const { courseId } = useParams();
     //const assignmentList = assignments.filter((assignment) => assignment.course === courseId);
 
-    const assignmentList = useSelector((state: KanbasState) => state.assignmentsReducer.assignments);
+    const allAssignments = useSelector((state: KanbasState) => state.assignmentsReducer.assignments);
+    const assignmentList = allAssignments.filter((assignment) => assignment.course === courseId);
 
     const dispatch = useDispatch();
 
@@ -64,8 +65,8 @@ function Assignments() {
                 </span>
                         </div>
                         <ul className="list-group">
-                            {assignmentList.map((assignment) => (
-                                <li className="list-group-item">
+                            {assignmentList.map((assignment, index) => (
+                                <li key={index} className="list-group-item">
                                     <FaEllipsisV className="ms-3 me-2" />
                                     <Link
                                         to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import {assignments} from "../../../Database";
 import "../../../styles.css";
@@ -23,10 +23,15 @@ function AssignmentEditor() {
     const assignmentsList = useSelector((state: KanbasState) =>
         state.assignmentsReducer.assignments);
 
-    // if (assignmentId !== null) {
-    //     const clickedAssignment = (assignmentsList.find((a) => a._id === assignmentId));
-    //     setAssignment(clickedAssignment);
-    // };
+
+    useEffect(() => {
+        if (assignmentId !== null) {
+            const clickedAssignment = (assignmentsList.find((a) => a._id === assignmentId));
+            setAssignment(clickedAssignment);
+        };
+    }, [assignmentId]);
+
+
 
 
     const {courseId} = useParams();
